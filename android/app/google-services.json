@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "638067866061",
+    "project_id": "doctor-marriage-bureau",
+    "storage_bucket": "doctor-marriage-bureau.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638067866061:android:506be6d2b7e49013986c84",
+        "android_client_info": {
+          "package_name": "com.activeitzone.active_matrimonial_flutter_app.active_matrimonial_flutter_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyfAIdcTKdmNoMIJ1r5yWr8QTsiI2mL98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

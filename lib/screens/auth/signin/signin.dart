@@ -1,3 +1,4 @@
+import 'package:active_matrimonial_flutter_app/app_config.dart';
 import 'package:active_matrimonial_flutter_app/components/common_input.dart';
 import 'package:active_matrimonial_flutter_app/components/social_login_widget.dart';
 import 'package:active_matrimonial_flutter_app/const/const.dart';
@@ -358,11 +359,12 @@ class _LoginState extends State<Login> {
             color: MyTheme.white,
           ),
           Text(
-            AppLocalizations.of(context)!.login_text_title,
+            AppConfig.app_name,
             style: Styles.bold_white_22,
           ),
           Text(
-            AppLocalizations.of(context)!.login_text_sub_title,
+            AppLocalizations.of(context)!.login_text_title,
+            // AppLocalizations.of(context)!.login_text_sub_title,
             style: Styles.regular_white_14,
           ),
         ],

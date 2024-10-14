@@ -3,6 +3,7 @@ import 'package:active_matrimonial_flutter_app/main.dart';
 import 'package:active_matrimonial_flutter_app/redux/libs/drop_down/profile_dropdown_middleware.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:intl/intl.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 bool isNumber(String text) {
   return RegExp('^[0-9]+\$').hasMatch(text);
@@ -41,3 +42,10 @@ Widget itemSpacer(h, w) => SizedBox(
       height: h.toDouble(),
       width: w.toDouble(),
     );
+Future<void> launchUrl(String url) async {
+  try {
+    await launchUrlString(url); // Directly await here
+  } catch (e) {
+    throw Exception('Could not launch $url');
+  }
+}

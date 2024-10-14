@@ -18,7 +18,7 @@ class AuthRepository {
       "password": password,
       "identity_matrix": AppConfig.purshase_code
     });
-
+    print(postBody);
     var response = await http.post(Uri.parse(baseUrl),
         headers: {
           "Accept": "application/json",
@@ -140,7 +140,7 @@ class AuthRepository {
     var postBody = jsonEncode({
       'first_name': firstName,
       'last_name': lastName,
-      '${emailOrPhoneText}': emailOrPhone,
+      '$emailOrPhoneText': emailOrPhone,
       'on_behalf': onBehalf,
       'gender': gender,
       'date_of_birth': dateOfBirth,
@@ -148,7 +148,10 @@ class AuthRepository {
       'password_confirmation': passwordConfirmation,
       'referral_code': referral,
       'g-recaptcha-response': recapthca
+      
     });
+    print(baseUrl);
+    print(postBody);
     var response = await http.post(Uri.parse(baseUrl),
         headers: {
           "Accept": "application/json",

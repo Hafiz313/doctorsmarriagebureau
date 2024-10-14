@@ -3,7 +3,7 @@ import 'package:active_matrimonial_flutter_app/social_config.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:twitter_login/twitter_login.dart';
+// import 'package:twitter_login/twitter_login.dart';
 
 import '../main.dart';
 
@@ -65,30 +65,30 @@ class SocialLogins {
 
   onPressedTwitterLogin(BuildContext context) async {
     try {
-      final twitterLogin = new TwitterLogin(
-          apiKey: SocialConfig().twitter_consumer_key,
-          apiSecretKey: SocialConfig().twitter_consumer_secret,
-          redirectURI: 'activeecommerceflutterapp://');
-      // Trigger the sign-in flow
-
-      final authResult = await twitterLogin.login();
-
-      // var loginResponse = await AuthRepository().getSocialLoginResponse(
-      //     "twitter",
-      //     authResult.user.name,
-      //     authResult.user.email,
-      //     authResult.user.id.toString(),
+      // final twitterLogin = new TwitterLogin(
+      //     apiKey: SocialConfig().twitter_consumer_key,
+      //     apiSecretKey: SocialConfig().twitter_consumer_secret,
+      //     redirectURI: 'activeecommerceflutterapp://');
+      // // Trigger the sign-in flow
+      //
+      // final authResult = await twitterLogin.login();
+      //
+      // // var loginResponse = await AuthRepository().getSocialLoginResponse(
+      // //     "twitter",
+      // //     authResult.user.name,
+      // //     authResult.user.email,
+      // //     authResult.user.id.toString(),
+      // //     access_token: authResult.authToken,
+      // //     secret_token: authResult.authTokenSecret
+      //
+      // store.dispatch(socialLoginMiddleware(
+      //   context: context,
+      //     social_provider: "twitter",
+      //     email: authResult.user!.email,
+      //     name: authResult.user!.name,
+      //     provider: authResult.user!.id.toString(),
       //     access_token: authResult.authToken,
-      //     secret_token: authResult.authTokenSecret
-
-      store.dispatch(socialLoginMiddleware(
-        context: context,
-          social_provider: "twitter",
-          email: authResult.user!.email,
-          name: authResult.user!.name,
-          provider: authResult.user!.id.toString(),
-          access_token: authResult.authToken,
-          secret_token: authResult.authTokenSecret));
+      //     secret_token: authResult.authTokenSecret));
     } on Exception catch (e) {
       print("error is ....... $e");
       // TODO

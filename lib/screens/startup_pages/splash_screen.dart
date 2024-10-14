@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../helpers/main_helpers.dart';
 import '../../helpers/shared_pref.dart';
 
 late SharedPreferences prefs;
@@ -127,9 +128,14 @@ class _SplashScreenState extends State<SplashScreen> {
                     const SizedBox(
                       height: 6,
                     ),
-                    Text(
-                      AppConfig.copyright_text,
-                      style: Styles.regular_light_grey_12,
+                    InkWell(
+                      onTap: (){
+                        launchUrl(AppConfig.copyright_link);
+                      },
+                      child: Text(
+                        AppConfig.copyright_text,
+                        style: Styles.regular_light_grey_12,
+                      ),
                     ),
                   ],
                 ),
